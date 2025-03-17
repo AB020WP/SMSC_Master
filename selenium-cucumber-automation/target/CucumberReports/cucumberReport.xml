@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="79.768" tests="4" skipped="0" failures="1" errors="0">
+<testcase classname="Dashboard Functionality" name="Verify visual elements of the Dashboard, including labels, text accuracy, color schemes, sizes, and alignment" time="15.864">
+<system-out><![CDATA[
+When the user enters a valid username in the "Username" field...............passed
+And the user enters a valid password in the "Password" field................passed
+And the user clicks the "LOGIN" button......................................passed
+Then all visual elements should be accurately displayed according to the design specifications.passed
+]]></system-out>
+</testcase>
+<testcase classname="Dashboard Functionality" name="Verify that the time intervals on the chart are correctly represented" time="22.342">
+<system-out><![CDATA[
+When the user enters a valid username in the "Username" field...............passed
+And the user enters a valid password in the "Password" field................passed
+And the user clicks the "LOGIN" button......................................passed
+When the user selects a different channel from the "simulator-mtn" dropdown.passed
+Then Verify that the time intervals on the axis correctly labeled...........passed
+And the Pie chart should display statuses: sent, delivered, failed, errors, queued, started, and completed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Dashboard Functionality" name="Verify that the user can hover over the pie chart segments and view correct message information" time="19.137">
+<failure type="java.lang.AssertionError" message="Failed to hover over element: By.xpath: //*[name()='path' and contains(@name,'Queued')]">
+<![CDATA[java.lang.AssertionError: Failed to hover over element: By.xpath: //*[name()='path' and contains(@name,'Queued')]
+	at org.junit.Assert.fail(Assert.java:89)
+	at smsc_utility.SMSC_ExceptionHandler.HandleException(SMSC_ExceptionHandler.java:13)
+	at smsc_accelerators.SMSC_Actions.mouseover(SMSC_Actions.java:295)
+	at smsc_stepDefinitions.smsc_DashBoard.Status_message_should_display_as_user_hovers_over_each_segment_of_pie_chart(smsc_DashBoard.java:66)
+	at ✽.Status message should display as user hovers over each segment of pie chart(file:///C:/ForPractice/selenium-cucumber-automation/src/test/resources/smsc_features/smsc_Dashboard.feature:17)
+]]>
+</failure>
+<system-out><![CDATA[
+When the user enters a valid username in the "Username" field...............passed
+And the user enters a valid password in the "Password" field................passed
+And the user clicks the "LOGIN" button......................................passed
+Then Status message should display as user hovers over each segment of pie chart.failed
+]]></system-out>
+</testcase>
+<testcase classname="Dashboard Functionality" name="Verify that Data changes according to each Channels selected" time="22.065">
+<system-out><![CDATA[
+When the user enters a valid username in the "Username" field...............passed
+And the user enters a valid password in the "Password" field................passed
+And the user clicks the "LOGIN" button......................................passed
+When the user selects a different channel from the "MTN Uganda Limited" dropdown.passed
+And user gets the data from the page to compare with........................passed
+Then the user selects a different channel from the "simulator-mtn" dropdown.passed
+Then Validate that the data from the previous channel does not match with the current channel.passed
+]]></system-out>
+</testcase>
+</testsuite>

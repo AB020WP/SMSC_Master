@@ -9,7 +9,7 @@ Feature: Dashboard Functionality
     Then all visual elements should be accurately displayed according to the design specifications
 
   Scenario: Verify that the time intervals on the chart are correctly represented
-    When the user selects a different channel from the "simulator-mtn" dropdown
+    When the user selects a different channel from the "MTN" dropdown
     Then Verify that the time intervals on the axis correctly labeled
     And the Pie chart should display statuses: sent, delivered, failed, errors, queued, started, and completed
 
@@ -17,7 +17,7 @@ Feature: Dashboard Functionality
     Then Status message should display as user hovers over each segment of pie chart
 
   Scenario: Verify that Data changes according to each Channels selected
-    When the user selects a different channel from the "MTN Uganda Limited" dropdown
+    When the user selects a different channel from the "MTN" dropdown
     And user gets the data from the page to compare with
-    Then the user selects a different channel from the "simulator-mtn" dropdown
+    Then the user selects a different channel from the "Airtel-UAT" dropdown
     Then Validate that the data from the previous channel does not match with the current channel

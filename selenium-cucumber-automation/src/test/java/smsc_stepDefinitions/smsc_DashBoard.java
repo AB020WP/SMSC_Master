@@ -49,13 +49,13 @@ public class smsc_DashBoard extends SMSC_Base {
 
         @When("user gets the data from the page to compare with")
         public void user_gets_the_data_from_the_page_to_compare_with() throws Throwable {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             TotalMessages_Count = SMSC_Actions.getElementText(SMSC_DashBoard_PageObjects.TotalMessages_Count, "Total Messages Count");
         }
 
         @When("Validate that the data from the previous channel does not match with the current channel")
         public void verify_that_the_data_from_the_previous_channel_does_not_match_with_the_current_channel() throws Throwable {
-            Thread.sleep(3000);
+            Thread.sleep(4000);
             String Data = SMSC_Actions.getElementText(SMSC_DashBoard_PageObjects.TotalMessages_Count, "Total Messages Count");
             Assert.assertNotEquals(TotalMessages_Count,Data);
         }
@@ -67,7 +67,7 @@ public class smsc_DashBoard extends SMSC_Base {
             Thread.sleep(5000);
             errorPieCount = SMSC_Actions.getElementText(SMSC_DashBoard_PageObjects.errorPieCount_Display,"Error Pie Chart Count");
             System.out.println(errorPieCount);
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             SMSC_Actions.isElementVisible(SMSC_DashBoard_PageObjects.queuedMessageCount_lbl, "Total Messages");
         }
 

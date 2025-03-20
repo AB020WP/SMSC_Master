@@ -8,7 +8,7 @@ public class SMSC_DashBoard_PageObjects {
     public static final By dashBoardSideBar_btn = By.xpath("//p[text()='Dashboard']");
     public static final By yAxis_Interval = By.xpath("//*[@class='recharts-layer recharts-cartesian-axis recharts-yAxis yAxis']");
     public static final By grindGraph = By.xpath("//option[text()='simulator-mtn']");
-    public static final By Piechart_errors = By.xpath("//*[name()='path' and contains(@name,'Queued')]");
+    public static final By Piechart_errors = By.xpath("//*[name()='path' and (contains(@name, 'Completed') or contains(@name, 'Queued'))]");
     public static final By monitorTransactions_lbl = By.xpath("//h4[contains(text(), 'Monitor Transactions for Last 24hr')]");
     public static final By totalTransactions_lbl = By.xpath("//div[contains(text(), 'Total Transactions:')]");
     public static final By barcartcontainer_chart = By.xpath("//div[@class='barChart']//div[@class='transaction-container']");

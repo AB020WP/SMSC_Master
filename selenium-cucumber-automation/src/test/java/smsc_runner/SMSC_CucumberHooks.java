@@ -16,7 +16,7 @@ public class SMSC_CucumberHooks {
     @Before
     public void initialize() throws InterruptedException {
         setUp();
-        String baseUrl = SMSC_Utils.ConfigReader.getProperty("base_url");
+        String baseUrl = SMSC_Utils.ConfigReader.getProperty("Absa_Uat");
         System.out.println("Base URL from config file: " + baseUrl);
         driver.get(baseUrl);
         Thread.sleep(9000);
